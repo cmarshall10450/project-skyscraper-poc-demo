@@ -1,0 +1,97 @@
+{
+	"Microsoft.Analytics": {
+		"nodeConfig": {
+			"colors": {
+				"backgroundColor": "#f55142AA",
+				"borderColor": "##f55142"
+			}
+		},
+		"resources": [
+			{
+				"name": "databricks",
+				"label": "Databricks Workspace",
+				"defaultPrefix": "databricks-workspace"
+			},
+			{
+				"name": "dataLakeStorageGen1",
+				"label": "Data Lake Storage Gen1",
+				"defaultPrefix": "adls"
+			},
+			{
+				"name": "eventHubCluster",
+				"label": "Event Hub Cluster",
+				"defaultPrefix": "evh-cluster"
+			},
+			{
+				"name": "eventHub",
+				"label": "Event Hub",
+				"defaultPrefix": "event-hub"
+			},
+			{
+				"name": "hdInsightCluster",
+				"label": "HDInsight Cluster",
+				"defaultPrefix": "hdi-cluster"
+			},
+			{
+				"name": "logAnalyticsWorkspace",
+				"label": "Log Analytics Workspace",
+				"defaultPrefix": "log-analytics-workspace"
+			},
+			{
+				"name": "streamAnalyticsJob",
+				"label": "Stream Analytics Job",
+				"defaultPrefix": "stream-analytics-job"
+			},
+			{
+				"name": "synapseAnalytics",
+				"label": "Synapse Analytics Workspace",
+				"defaultPrefix": "synapse-workspace"
+			}
+		]
+	},
+	"Microsoft.Compute": {
+		"nodeConfig": {
+			"colors": {
+				"backgroundColor": "#008AD7AA",
+				"borderColor": "#008AD7"
+			}
+		},
+		"resources": [
+			{
+				"name": "appPlan",
+				"label": "App Plan",
+				"defaultPrefix": "app-plan"
+			},
+			{
+				"name": "autoManagedVm",
+				"label": "Auto Managed VM",
+				"defaultPrefix": "auto-managed-vm"
+			},
+			{
+				"name": "availabilitySet",
+				"label": "Availability Set",
+				"defaultPrefix": "availability-set"
+			},
+			{
+				"name": "containerInstance",
+				"label": "Container Instance",
+				"defaultPrefix": "container-instance"
+			},
+			{
+				"name": "disk",
+				"label": "Disk",
+				"defaultPrefix": "disk"
+			},
+			{
+				"name": "functionApp",
+				"label": "Function App",
+				"defaultPrefix": "function-app"
+			},
+			{
+				"name": "virtualMachine",
+				"label": "Virtual Machine",
+				"defaultPrefix": "vm"
+			}
+		]
+	}
+}

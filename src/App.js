@@ -1,58 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from 'react'
+import { Container, Col, Row } from 'react-bootstrap'
+import ResourcesList from './components/ResourcesList'
+import Editor from './components/Editor'
+import Inspector from './components/Inspector'
+import Navigation from './components/Navigation'
+
+import './App.scss'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Navigation />
+			<Container fluid>
+				<Row>
+					<Col md={2} className="sidebar resources-list">
+						<ResourcesList />
+					</Col>
+					<Col>
+						<Editor />
+					</Col>
+					<Col md={2} className="sidebar inspector">
+						<Inspector />
+					</Col>
+				</Row>
+			</Container>
+		</>
+	)
 }
 
-export default App;
+export default App

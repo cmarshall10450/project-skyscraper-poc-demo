@@ -1,0 +1,56 @@
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+.container-fluid {
+	padding: 0;
+}
+
+.editor {
+	height: 100vh;
+	width: 100%;
+	background-color: white;
+	background-size: 60px 60px;
+	background-image: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.15) 1px,
+			transparent 1px,
+			transparent 15px,
+			rgba(0, 0, 0, 0.1) 15px,
+			transparent 16px,
+			transparent 30px,
+			rgba(0, 0, 0, 0.1) 30px,
+			transparent 31px
+		),
+		linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.15) 1px,
+			transparent 1px,
+			transparent 15px,
+			rgba(0, 0, 0, 0.1) 15px,
+			transparent 16px,
+			transparent 30px,
+			rgba(0, 0, 0, 0.1) 30px,
+			transparent 31px
+		);
+}
+
+.sidebar-title {
+	background: blue;
+	color: #e1e1e1;
+	padding: 10px;
+	margin: 0;
+}
+
+.resources-list-item:hover {
+	background: #333;
+}
+
+.resource-node {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// .resource-node-icon {
+// 	margin: ;
+// }

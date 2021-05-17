@@ -6,7 +6,11 @@ const ResourceIcon = (props) => {
 
 	const [namespace, type] = resourceType.split('/')
 	const Icon = iconMap[namespace][type]
-	return <Icon {...props} />
+	return (
+		<div className="resource-icon">
+			<Icon {...props} />
+		</div>
+	)
 }
 
 export default ResourceIcon

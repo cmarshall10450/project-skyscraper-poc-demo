@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ResourceNodeWidget from './ResourceNodeWidget'
+import ResourceNodeWidget from '../../widgets/resource-node/ResourceNodeWidget'
 import ResourceNodeModel from './ResourceNodeModel'
 import { AbstractReactFactory } from '@projectstorm/react-canvas-core'
 
@@ -12,8 +12,8 @@ export default class ResourceNodeFactory extends AbstractReactFactory {
 		return (
 			<ResourceNodeWidget
 				engine={this.engine}
-				height={64}
-				width={64}
+				height={100}
+				width={150}
 				node={event.model}
 			/>
 		)

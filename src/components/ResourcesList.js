@@ -23,6 +23,7 @@ const ResourcesList = () => {
 											event.dataTransfer.setData(
 												'storm-diagram-node',
 												JSON.stringify({
+													apiVersion: data.apiVersion,
 													resourceType: `${namespace}/${resource.name}`,
 													defaultPrefix: resource.defaultPrefix,
 													nodeConfig: data.nodeConfig,

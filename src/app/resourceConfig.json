@@ -2,10 +2,12 @@
 	"Microsoft.Analytics": {
 		"nodeConfig": {
 			"colors": {
-				"backgroundColor": "#f55142AA",
-				"borderColor": "##f55142"
+				"backgroundColor": "#008AD7",
+				"borderColor": "#0071b0",
+				"textColor": "#fff"
 			}
 		},
+		"apiVersion": "2020-02-20",
 		"resources": [
 			{
 				"name": "databricks",
@@ -52,10 +54,12 @@
 	"Microsoft.Compute": {
 		"nodeConfig": {
 			"colors": {
-				"backgroundColor": "#008AD7AA",
-				"borderColor": "#008AD7"
+				"backgroundColor": "#e1e1e1",
+				"borderColor": "#333",
+				"textColor": "#222"
 			}
 		},
+		"apiVersion": "2020-02-20",
 		"resources": [
 			{
 				"name": "appPlan",

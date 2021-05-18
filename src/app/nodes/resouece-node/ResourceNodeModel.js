@@ -8,9 +8,9 @@ export default class ResourceNodeModel extends NodeModel {
 		})
 
 		this.apiVersion = apiVersion
-		this.type = resourceType
+		this.resourceType = resourceType
 		this.name = resourceName
-		this.config = config
+		this.config = { ...config, templateData: {} }
 
 		this.addPort(
 			new ResourceNodePortModel(
@@ -65,7 +65,7 @@ export default class ResourceNodeModel extends NodeModel {
 		return {
 			...super.serialize(),
 			name: this.name,
-			type: this.type,
+			resourceType: this.resourceType,
 			configuration: this.config,
 		}
 	}
@@ -73,7 +73,7 @@ export default class ResourceNodeModel extends NodeModel {
 	deserialize(event) {
 		super.deserialize(event)
 		this.name = event.data.name
-		this.type = event.data.type
+		this.resourceType = event.data.resourceType
 		this.config = event.data.configuration
 	}
 
@@ -104,7 +104,7 @@ export default class ResourceNodeModel extends NodeModel {
 	getTemplateData() {
 		return {
 			...this.config.templateData,
-			type: this.type,
+			type: this.resourceType,
 			apiVersion: this.apiVersion,
 			dependsOn: this.getDependencies().map(
 				(dep) => dep?.config?.templateData?.resourceName

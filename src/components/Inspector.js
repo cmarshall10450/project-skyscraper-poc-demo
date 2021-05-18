@@ -4,8 +4,10 @@ import { Form } from 'react-bootstrap'
 import { getSelectedNode } from '../slices/selectedNodeSlice'
 
 const Inspector = ({ engine }) => {
-	const [formState, setFormState] = useState({})
 	const selectedNode = useSelector(getSelectedNode)
+	const [formState, setFormState] = useState(
+		selectedNode?.configuration?.templateData || {}
+	)
 
 	const handleChange = (e) => {
 		e.stopPropagation()
@@ -52,7 +54,7 @@ const Inspector = ({ engine }) => {
 					value={formState.resourceName}
 					onChange={handleChange}
 					onBlur={handleNodeDataBlur}
-				/>
+				/> 
 			</Form.Group>
 		</Form>
 	)

@@ -24,6 +24,7 @@ import {
 	ButtonGroup,
 	ButtonToolbar,
 } from 'react-bootstrap'
+import ls from 'local-storage'
 import ResourcesList from './ResourcesList'
 import Inspector from './Inspector'
 import ContextMenus from './menus/ContextMenus'
@@ -138,6 +139,18 @@ const Editor = () => {
 		return resources
 	}
 
+	const saveDiagram = () => {
+		ls.set('merkle-arm-ui-diagram', model.serialize())
+	}
+
+	const loadDiagram = () => {
+		const savedDiagram = ls.get('merkle-arm-ui-diagram')
+		model.deserializeModel(savedDiagram, engine)
+		console.log(model)
+		engine.setModel(model)
+		engine.repaintCanvas()
+	}
+
 	const fireAction = (event) => {
 		return engine.getActionEventBus().fireAction({
 			event: {
@@ -198,6 +211,12 @@ const Editor = () => {
 							</ButtonGroup>
 							<ButtonGroup className="mr-2" aria-label="First group">
 								<Button onClick={exportTemplateData}>Export Template</Button>
+							</ButtonGroup>
+							<ButtonGroup className="mr-2" aria-label="First group">
+								<Button onClick={saveDiagram}>Save Diagram</Button>
+							</ButtonGroup>
+							<ButtonGroup className="mr-2" aria-label="First group">
+								<Button onClick={loadDiagram}>Load Diagram</Button>
 							</ButtonGroup>
 						</ButtonToolbar>
 					</Row>

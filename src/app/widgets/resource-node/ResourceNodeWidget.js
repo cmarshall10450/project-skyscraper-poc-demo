@@ -45,7 +45,7 @@ const ResourceNodeWidget = ({ node, engine, height, width }) => {
 				fontFamily: 'Segoe UI, Verdana, Helvetica, sans-serif',
 			}}>
 			<div>
-				<ResourceIcon size={64} resourceType={node.type} />
+				<ResourceIcon size={64} resourceType={node.resourceType} />
 				{/* Top ports */}
 				<PortWidget
 					style={{
